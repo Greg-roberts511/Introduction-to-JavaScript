@@ -18,7 +18,7 @@ if (age > name) {
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-// Number(" 1999 ");
+parseInt("1999");
 
 //Task d: Write a function to multiply a*b
 
@@ -95,7 +95,19 @@ function puppy(dogAge) {
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+let km = kmToMiles(5);
+
+function kmToMiles(km) {
+  console.log(km * 0.62137);
+}
+
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
+
+let feet = feetToCM(3);
+
+function feetToCM(feet) {
+  console.log(feet * 30.48);
+}
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
@@ -104,7 +116,13 @@ function puppy(dogAge) {
 
 let bottles = annoyingSong(99);
 
-function annoyingSong(bottles) {}
+function annoyingSong(bottles) {
+  for (i = 0; i > 0; i--) {
+    console.log(
+      "[i] bottles of soda on the wall, [i] bottles of soda, take one down pass it around [i] bottles of soda on the wall"
+    );
+  }
+}
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
