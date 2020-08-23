@@ -12,8 +12,8 @@ if (votingAge > 18) {
 
 let name = 1;
 let age = 19;
-if (age !== name) {
-  console.log("hello");
+if (age > name) {
+  console.log(name - age);
 }
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
@@ -49,16 +49,38 @@ function multi(myAge) {
 // 11 - 15 lbs - .03% of their body weight
 // > 15lbs - .02% of their body weight
 
-function adultDogs() {
-  if (weight < 5) {
-    return weight * 0.05;
+let weight = adultDogs(15);
+
+function adultDogs(weight) {
+  if (weight <= 5) {
+    console.log(weight * 0.05);
+  } else if (weight <= 10) {
+    console.log(weight * 0.04);
+  } else if (weight <= 15) {
+    console.log(weight * 0.03);
+  } else {
+    console.log(weight * 0.02);
   }
 }
 
+// adultDogs();
+
 // Puppies less than 1 year
 // 2 - 4 months 10% of their body weight
-// 4 - 7 months 5% of their body weight
+// 4 - 7 months 5% of their body weight.
 // 7 - 12 months 4% of their body weight
+
+let dogAge = puppy(8);
+
+function puppy(dogAge) {
+  if (dogAge <= 4) {
+    console.log(dogAge * 0.1);
+  } else if (dogAge <= 7) {
+    console.log(dogAge * 0.05);
+  } else if (dogAge <= 12) {
+    console.log(dogAge * 0.04);
+  }
+}
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
 
@@ -79,6 +101,10 @@ function adultDogs() {
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
+
+let bottles = annoyingSong(99);
+
+function annoyingSong(bottles) {}
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
