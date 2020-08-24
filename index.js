@@ -91,11 +91,53 @@ function puppy(dogAge) {
 // use .ndom to determine the computers choice
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
 
+let player = rockPaperSissors("paper");
+
+function rockPaperSissors(player) {
+  //com choice
+  let comChoice = Math.floor(Math.random() * 3 + 1);
+  //player to number
+  if (player === "paper") {
+    choice = 1;
+  } else if (player === "rock") {
+    choice = 2;
+  } else if (player === "scissors") {
+    choice = 3;
+  } else {
+    console.log("invalid query please reply 'paper', 'rock', 'scissors'");
+  }
+  //how to win
+  if (choice === comChoice) {
+    console.log("Draw!");
+  }
+  if (choice === 1) {
+    if (comChoice === 2) {
+      console.log("Com Wins! ");
+    } else {
+      console.log("You win!");
+    }
+  }
+  if (choice === 2) {
+    if (comChoice === 3) {
+      console.log("Com Wins! ");
+    } else {
+      console.log("You win!");
+    }
+  }
+  if (choice === 3) {
+    if (comChoice === 1) {
+      console.log("Com Wins! ");
+    } else {
+      console.log("You win!");
+    }
+  }
+}
+
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-let km = kmToMiles(5);
+// let km = kmToMiles(5);
 
 function kmToMiles(km) {
   console.log(km * 0.62137);
@@ -103,7 +145,7 @@ function kmToMiles(km) {
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
 
-let feet = feetToCM(3);
+// let feet = feetToCM(3);
 
 function feetToCM(feet) {
   console.log(feet * 30.48);
@@ -114,17 +156,17 @@ function feetToCM(feet) {
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
 
-var bottles = annoyingSong(99);
+// var bottles = annoyingSong(9);
 
 function annoyingSong(bottles) {
-  for (i = 0; i < 100; i++, bottles--) {
+  for (i = 0; i < 10; i++, bottles--) {
     console.log(
       bottles +
-        "bottles of soda on the wall," +
+        " bottles of soda on the wall, " +
         bottles +
-        "bottles of soda, take one down pass it around" +
+        " bottles of soda, take one down pass it around " +
         bottles +
-        "bottles of soda on the wall"
+        " bottles of soda on the wall"
     );
   }
 }
