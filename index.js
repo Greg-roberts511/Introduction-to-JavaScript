@@ -180,6 +180,22 @@ function annoyingSong(bottles) {
 //60s should be D
 //and anything below 60 should be F
 
+let mark = gradeingMachine(70);
+
+function gradeingMachine(mark) {
+  if (mark >= 90) {
+    console.log("A");
+  } else if (mark >= 80) {
+    console.log("B");
+  } else if (mark >= 70) {
+    console.log("C");
+  } else if (mark >= 60) {
+    console.log("D");
+  } else if (mark >= 60) {
+    console.log("F");
+  }
+}
+
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays
